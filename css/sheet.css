@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-image: url('https://images.unsplash.com/photo-1490281127531-44704fa668fe?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+.nav{
+    height: 3.2rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: black;
+}
+
+.nav_logo img{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px 100px 5px 100px;
+}
+
+.nav_logo {
+    font-size: 1.5rem;
+    margin: auto 1rem;
+}
+
+
+.nav_menu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav_menu ul li{
+    list-style: none;
+}
+
+.nav_menu ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+}
+
+.nav_menu li:hover{
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+.nav_hamburger{
+    width: 1.875rem;
+    height: 1.313rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+.nav_hamburger_line{
+    height: 0.188rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 0.625rem;
+    transition: all ease-in-out 0.2s;
+}
+
+footer{
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(255, 205, 205,0.2);
+    position: absolute;
+    bottom: 0;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 10px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+  
+@media screen and (max-width: 550px){
+    .nav_hamburger{
+        display: flex;
+    }
+
+    .nav_menu{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255,0.2);
+        top: -13rem;
+        width: 100%;
+        transition: all ease-in-out 0.4s;
+    }
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav_menu ul{
+        flex-direction: column;
+        width: 100%;
+        padding: 3rem 0 0.06rem;
+    }
+    .nav_menu ul li{
+        text-align: center;
+    }
+    .nav_menu{
+        z-index: -1;
+    }
+    .nav_menu.active{
+        top:0;
+    }
+    .nav_hamburger.active :nth-child(1)
+    {
+        transform: rotate(45deg) translate(0.45rem, 0.1875rem);
+    }
+    .nav_hamburger.active :nth-child(2)
+    {
+        opacity: 0;
+    }
+    .nav_hamburger.active :nth-child(3)
+    {
+        transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+    }
+
+    footer{
+        justify-content: center;
+    }
+}
