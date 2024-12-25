@@ -1,6 +1,50 @@
 body{
     margin: 0;
     padding: 0;
+    justify-content: center;
+}
+
+main{
+    background-color: rgba(255, 205, 205,0.2);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 3rem;
+    border: solid 5px rgba(255, 136, 0, 0.1);
+    color: antiquewhite;
+}
+
+
+main h3{
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+section{
+    margin: 1rem 3rem;
+    width: 8rem;
+    padding: 0.5rem;
+    height: 2.5rem;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgba(247, 141, 3, 0.2);
+    border: solid 5px rgba(255, 136, 0, 0.1); 
+    border-radius: 100px 100px 10px 100px;
+}
+
+section a{
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+section:hover
+{
+    transition: 0.5s;
+    background-color: #ff9100cf;
 }
 
 .bg {
@@ -30,6 +74,7 @@ body{
     height: 50px;
     width: 50px;
     border-radius: 100px 100px 5px 100px;
+    border: solid 5px rgba(255, 136, 0, 0.1); 
 }
 
 .nav_logo {
@@ -84,10 +129,11 @@ footer{
     height: 3rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     background-color: rgba(255, 205, 205,0.2);
     position: absolute;
     bottom: 0;
+    right: 0;
 }
 
 .fa {
@@ -96,7 +142,6 @@ footer{
     width: 30px;
     text-align: center;
     text-decoration: none;
-    
   }
   
   .fa:hover {
@@ -126,6 +171,26 @@ footer{
 @media screen and (max-width: 550px){
     .nav_hamburger{
         display: flex;
+    }
+
+    main{
+        font-size: 2.4rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    main h1{
+        margin: 2.5rem;
+        justify-content: end;
+    }
+        /*-----------------------------------------------------------------------------------*/
+        /*-----------------------------------------------------------------------------------*/
+    main h3{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        font-size: 1rem;
+        padding-left: 8rem;
     }
 
     .nav_menu{
@@ -168,7 +233,9 @@ footer{
         transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
     }
 
-    footer{
-        justify-content: center;
+    section{
+        width: 8rem;
     }
+
+
 }
